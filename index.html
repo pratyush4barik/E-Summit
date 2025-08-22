@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>ORTHOC - Healthcare Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ORTHOC</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
+                <li class="nav-item"><a href="#departments" class="nav-link">DEPARTMENTS</a></li>
+                <li class="nav-item"><a href="#doctors" class="nav-link">DOCTORS</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">CONTACT US</a></li>
+                <li class="nav-item"><a href="signin.html" class="nav-link signin-btn">SIGN IN</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>WE PROVIDE BEST<br>HEALTHCARE</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+                
+                <!-- AI Button -->
+                <button type="button" class="cta-button" id="ai-assessment-btn">
+                    AI Assessment
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments -->
+    <section id="departments" class="departments">
+        <div class="container">
+            <h2>OUR DEPARTMENTS</h2>
+            <p>Aenean sollicitudin, lorem quis bibendum auctor...</p>
+            
+            <div class="departments-grid">
+                <div class="department-card">
+                    <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Cardiology</h3>
+                    <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+                <div class="department-card">
+                    <div class="card-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <h3>Pulmonology</h3>
+                    <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+                <div class="department-card">
+                    <div class="card-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3>Neurology</h3>
+                    <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+                <div class="department-card">
+                    <div class="card-icon"><i class="fas fa-camera"></i></div>
+                    <h3>Laboratory</h3>
+                    <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+            </div>
+            
+            <button class="view-all-btn">VIEW ALL</button>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Female doctor">
+                </div>
+                <div class="about-text">
+                    <h2>ABOUT US</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque...</p>
+                    <button class="read-more-btn">READ MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Modal -->
+<div id="chatbot-modal" class="chatbot-modal" role="dialog" aria-modal="true">
+    <div class="chatbot-content">
+        <div class="chatbot-header">
+            <h2>AI Health Assessment</h2>
+            <span id="close-chatbot" class="close-btn" aria-label="Close Chatbot">&times;</span>
+        </div>
+
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+
+        <form class="chatbot-input" id="chatbot-form">
+            <input type="text" id="user-input" placeholder="Describe your symptoms..." required />
+            <button type="submit" id="send-btn">Send</button>
+        </form>
+    </div>
+</div>
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
